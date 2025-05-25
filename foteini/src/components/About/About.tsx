@@ -10,8 +10,8 @@ const About: React.FC = () => {
           <p>
             I am a dedicated psychologist with a passion for helping individuals
             navigate their mental health journey. With extensive experience in
-            neuropsychology and cognitive-behavioral therapy, I specialize in
-            providing personalized care for both adults and children.
+            cognitive-behavioral therapy, I specialize in providing personalized
+            care for adults.
           </p>
           <p>
             My approach combines evidence-based practices with a warm,
@@ -26,7 +26,7 @@ const About: React.FC = () => {
               <li>MSc in Psychology</li>
               <li>BSc in Psychology</li>
               <li>Certified Mental Health Counselor</li>
-              <li>Specialized in Child & Adolescent Mental Health</li>
+              <li>Specialized in Cognitive Behavioral Therapy</li>
             </ul>
           </div>
         </div>

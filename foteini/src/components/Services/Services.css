@@ -1,6 +1,6 @@
 .services {
   padding: 80px 20px;
-  background-color: #f5efe6;
+  background-color: #DBD0C5;
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to bottom, white, transparent);
+  background: linear-gradient(to bottom, #E4C6BD, transparent);
   pointer-events: none;
 }
 
@@ -24,7 +24,7 @@
 
 .services h2 {
   text-align: center;
-  color: #4a6741;
+  color: #9A9B87;
   font-size: 2.5rem;
   margin-bottom: 50px;
   position: relative;
@@ -40,7 +40,7 @@
   left: 0;
   width: 60px;
   height: 3px;
-  background: #4a6741;
+  background: #E4C6BD;
   transition: width 0.3s ease;
 }
 
@@ -59,7 +59,7 @@
   background: white;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(74, 103, 65, 0.1);
+  box-shadow: 0 4px 6px rgba(173, 142, 133, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -74,14 +74,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(74, 103, 65, 0.05), transparent);
+  background: linear-gradient(45deg, rgba(228, 198, 189, 0.05), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(74, 103, 65, 0.15);
+  box-shadow: 0 8px 15px rgba(173, 142, 133, 0.15);
 }
 
 .service-card:hover::before {
@@ -89,7 +89,7 @@
 }
 
 .service-card h3 {
-  color: #4a6741;
+  color: #9A9B87;
   font-size: 1.5rem;
   margin-bottom: 15px;
   font-weight: 600;
@@ -104,7 +104,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #4a6741;
+  background: #E4C6BD;
   transition: width 0.3s ease;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .service-card p {
-  color: #34495e;
+  color: #AD8E85;
   line-height: 1.6;
   font-size: 1.1rem;
   margin: 0;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Hero.css";
+import img1 from "../../assets/brain.png";
 
 const Hero: React.FC = () => {
   return (

@@ -1,27 +1,31 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Contact: React.FC = () => {
   const [selectedIssue, setSelectedIssue] = useState("");
 
   const mentalHealthIssues = [
     { value: "", label: "Select a topic (optional)" },
-    { value: "anxiety", label: "Anxiety & Stress" },
-    { value: "depression", label: "Depression" },
-    { value: "relationships", label: "Relationship Issues" },
-    { value: "self-esteem", label: "Self-esteem & Confidence" },
-    { value: "trauma", label: "Trauma & PTSD" },
-    { value: "grief", label: "Grief & Loss" },
-    { value: "addiction", label: "Addiction & Recovery" },
-    { value: "eating", label: "Eating Disorders" },
-    { value: "ocd", label: "OCD & Compulsive Behaviors" },
-    { value: "adhd", label: "ADHD & Focus Issues" },
-    { value: "sleep", label: "Sleep Problems" },
-    { value: "work", label: "Work-related Stress" },
-    { value: "parenting", label: "Parenting Challenges" },
+    { value: "anxiety-stress", label: "Anxiety and Stress" },
+    { value: "self-confidence", label: "Insecurity and Self-confidence" },
+    { value: "anger", label: "Anger Management" },
+    { value: "loneliness", label: "Feelings of Loneliness or Isolation" },
+    {
+      value: "relationships",
+      label: "Relationship Issues (Friends, Family, Romantic)",
+    },
+    { value: "exhaustion", label: "Feelings of Exhaustion and Burnout" },
+    { value: "communication", label: "Communication Problems" },
+    {
+      value: "life-changes",
+      label: "Managing Life Changes (e.g., New Job, Moving)",
+    },
+    { value: "negative-thoughts", label: "Dealing with Negative Thoughts" },
+    { value: "self-esteem", label: "Building Self-esteem" },
+    { value: "work-life", label: "Work-Life Balance" },
+    { value: "sleep", label: "Sleep Problems or Low Energy" },
+    { value: "personal-growth", label: "Finding Meaning and Personal Growth" },
+    { value: "fear", label: "Managing Fear and Indecision" },
     { value: "other", label: "Other (Please specify in message)" },
   ];
 
@@ -29,55 +33,6 @@ const Contact: React.FC = () => {
     <section id="contact" className="contact">
       <h2>Contact</h2>
       <div className="contact-container">
-        <div className="contact-info">
-          <h3>Get in Touch</h3>
-          <p>
-            <span>📧</span>
-            <a href="mailto:fotdrt@gmail.com">fotdrt@gmail.com</a>
-          </p>
-          <p>
-            <span>📞</span>
-            <a href="tel:+306977628660">(+30) 6977628660</a>
-          </p>
-          <p>
-            <span>📍</span>
-            Thessaloniki, Greece
-          </p>
-          <p>
-            <span>⏰</span>
-            Available for appointments Monday to Friday, 9:00 - 18:00
-          </p>
-
-          <div className="social-links">
-            <h4>Connect with Me</h4>
-            <div className="social-icons">
-              <a
-                href="https://linkedin.com/in/your-profile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <LinkedInIcon />
-              </a>
-              <a
-                href="https://facebook.com/your-profile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="https://instagram.com/your-profile"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <InstagramIcon />
-              </a>
-            </div>
-          </div>
-        </div>
         <form className="contact-form">
           <label>
             Name

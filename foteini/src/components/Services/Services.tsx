@@ -9,19 +9,19 @@ const Services: React.FC = () => {
         "Personalized one-on-one sessions focusing on your specific needs and goals.",
     },
     {
-      title: "Child & Adolescent Counseling",
-      description:
-        "Specialized support for young people dealing with emotional and behavioral challenges.",
-    },
-    {
       title: "Cognitive Behavioral Therapy",
       description:
         "Evidence-based approach to help identify and change negative thought patterns.",
     },
     {
-      title: "Neuropsychological Assessment",
+      title: "Relationship Counseling",
       description:
-        "Comprehensive evaluation of cognitive functioning and brain-behavior relationships.",
+        "Support for individuals and couples navigating relationship challenges.",
+    },
+    {
+      title: "Stress Management",
+      description:
+        "Techniques and strategies to help you cope with daily stressors and improve your well-being.",
     },
   ];
 

@@ -1,6 +1,6 @@
 .contact {
     padding: 80px 20px;
-    background-color: #f8f9fa;
+    background-color: #DBD0C5;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 .contact h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: #4a6741;
+    color: #9A9B87;
     font-size: 2.5rem;
 }
 
@@ -27,44 +27,44 @@
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(74, 103, 65, 0.1);
+    box-shadow: 0 4px 6px rgba(173, 142, 133, 0.1);
     position: sticky;
     top: 100px;
 }
 
 .contact-info h3 {
-    color: #4a6741;
+    color: #9A9B87;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
 .contact-info p {
     margin: 15px 0;
-    color: #34495e;
+    color: #AD8E85;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .contact-info a {
-    color: #4a6741;
+    color: #9A9B87;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
 }
 
 .contact-info a:hover {
-    color: #6b8e23;
+    color: #E4C6BD;
 }
 
 .social-links {
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid rgba(74, 103, 65, 0.1);
+    border-top: 1px solid rgba(173, 142, 133, 0.1);
 }
 
 .social-links h4 {
-    color: #4a6741;
+    color: #9A9B87;
     font-size: 1.2rem;
     margin-bottom: 15px;
 }
@@ -75,12 +75,12 @@
 }
 
 .social-icons a {
-    color: #4a6741;
+    color: #9A9B87;
     font-size: 1.8rem;
     transition: all 0.3s ease;
     padding: 8px;
     border-radius: 50%;
-    background: #f5f1e8;
+    background: #E4C6BD;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,10 +89,10 @@
 }
 
 .social-icons a:hover {
-    color: #6b8e23;
+    color: #AD8E85;
     transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(74, 103, 65, 0.15);
-    background: #e8f0e8;
+    box-shadow: 0 4px 8px rgba(173, 142, 133, 0.15);
+    background: #DBD0C5;
 }
 
 .contact-form {
@@ -100,13 +100,13 @@
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(74, 103, 65, 0.1);
+    box-shadow: 0 4px 6px rgba(173, 142, 133, 0.1);
 }
 
 .contact-form label {
     display: block;
     margin-bottom: 20px;
-    color: #4a6741;
+    color: #9A9B87;
     font-weight: 500;
 }
 
@@ -126,8 +126,8 @@
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #4a6741;
-    box-shadow: 0 0 0 2px rgba(74, 103, 65, 0.2);
+    border-color: #9A9B87;
+    box-shadow: 0 0 0 2px rgba(173, 142, 133, 0.2);
 }
 
 .issue-select {
@@ -145,7 +145,7 @@
     display: block;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #4a6741, #6b8e23);
+    background: linear-gradient(45deg, #9A9B87, #E4C6BD);
     color: white;
     border: none;
     border-radius: 5px;
@@ -157,8 +157,8 @@
 
 .contact-form button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(74, 103, 65, 0.3);
-    background: linear-gradient(45deg, #6b8e23, #4a6741);
+    box-shadow: 0 4px 15px rgba(173, 142, 133, 0.3);
+    background: linear-gradient(45deg, #E4C6BD, #9A9B87);
 }
 
 @media (max-width: 768px) {

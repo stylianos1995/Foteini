@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f5efe6;
+    background-color: #9A9B87;
     padding: 15px 20px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(74, 103, 65, 0.1);
+    box-shadow: 0 2px 4px rgba(173, 142, 133, 0.1);
     transition: background-color 0.5s ease;
 }
 
@@ -30,8 +30,8 @@
     border-radius: 50%;
     overflow: hidden;
     background: radial-gradient(circle at center, 
-        rgba(245, 239, 230, 0.8) 0%,
-        rgba(245, 239, 230, 0.4) 50%,
+        rgba(228, 198, 189, 0.8) 0%,
+        rgba(228, 198, 189, 0.4) 50%,
         transparent 100%
     );
 }
@@ -68,7 +68,7 @@
 .burger-line {
     width: 100%;
     height: 3px;
-    background-color: #4a6741;
+    background-color: #DBD0C5;
     border-radius: 3px;
     transition: all 0.3s ease;
 }
@@ -92,10 +92,11 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    background-color: rgba(154, 155, 135, 0.98);
 }
 
 .nav-menu a {
-    color: #4a6741;
+    color: #DBD0C5;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -111,7 +112,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #4a6741;
+    background-color: #E4C6BD;
     transition: width 0.3s ease;
 }
 
@@ -130,7 +131,7 @@
         right: -100%;
         width: 100%;
         height: 100vh;
-        background-color: rgba(245, 239, 230, 0.98);
+        background-color: rgba(154, 155, 135, 0.98);
         flex-direction: column;
         justify-content: center;
         gap: 40px;
@@ -164,8 +165,8 @@
 
     .nav-menu a {
         font-size: 1.8rem;
-        color: #4a6741;
-        text-shadow: 2px 2px 4px rgba(74, 103, 65, 0.1);
+        color: #DBD0C5;
+        text-shadow: 2px 2px 4px rgba(154, 155, 135, 0.1);
         transform: translateX(50px);
         opacity: 0;
         transition: all 0.3s ease;
@@ -183,13 +184,13 @@
 
     .nav-menu a::after {
         bottom: -8px;
-        background: linear-gradient(90deg, #4a6741, #8ba888);
+        background: linear-gradient(90deg, #E4C6BD, #DBD0C5);
         height: 3px;
     }
 
     .nav-menu a:hover {
         transform: scale(1.1);
-        color: #6b8e23;
+        color: #E4C6BD;
     }
 }
 
@@ -215,13 +216,13 @@
 }
 
 .navbar.dark-mode .nav-menu a {
-    color: #f5efe6;
+    color: #DBD0C5;
 }
 
 .navbar.dark-mode .nav-menu a::after {
-    background: linear-gradient(90deg, #f5efe6, #8ba888);
+    background: linear-gradient(90deg, #E4C6BD, #DBD0C5);
 }
 
 .navbar.dark-mode .burger-line {
-    background-color: #f5efe6;
+    background-color: #DBD0C5;
 } 
