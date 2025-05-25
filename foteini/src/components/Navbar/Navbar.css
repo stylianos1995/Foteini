@@ -4,10 +4,126 @@
     left: 0;
     right: 0;
     background-color: #9A9B87;
-    padding: 15px 20px;
+    padding: 1rem 5%;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(173, 142, 133, 0.1);
-    transition: background-color 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(154, 155, 135, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    color: #DBD0C5;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #DBD0C5;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: #E4C6BD;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #DBD0C5;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #DBD0C5;
+    transition: all 0.3s ease;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.hamburger.active {
+    background-color: transparent;
+}
+
+.hamburger.active::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.active::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #9A9B87;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .navbar-container {
@@ -92,7 +208,6 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(154, 155, 135, 0.98);
 }
 
 .nav-menu a {
@@ -138,6 +253,7 @@
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 20px;
         backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
         left: auto;
         transform: none;
         z-index: 1001;

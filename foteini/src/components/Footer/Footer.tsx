@@ -10,22 +10,24 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="contact-info">
           <h3>Get in Touch</h3>
-          <p>
-            <span>📧</span>
-            <a href="mailto:fotdrt@gmail.com">fotdrt@gmail.com</a>
-          </p>
-          <p>
-            <span>📞</span>
-            <a href="tel:+306977628660">(+30) 6977628660</a>
-          </p>
-          <p>
-            <span>📍</span>
-            Thessaloniki, Greece
-          </p>
-          <p>
-            <span>⏰</span>
-            Available for appointments Monday to Friday, 9:00 - 18:00
-          </p>
+          <div className="contact-details">
+            <p>
+              <span>📧</span>
+              <a href="mailto:fotdrt@gmail.com">fotdrt@gmail.com</a>
+            </p>
+            <p>
+              <span>📞</span>
+              <a href="tel:+306977628660">(+30) 6977628660</a>
+            </p>
+            <p>
+              <span>📍</span>
+              Thessaloniki, Greece
+            </p>
+            <p>
+              <span>⏰</span>
+              Available for appointments Monday to Friday, 9:00 - 18:00
+            </p>
+          </div>
         </div>
 
         <div className="social-links">
@@ -59,6 +61,11 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="footer-bottom">
+        <div className="legal-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span className="separator">|</span>
+          <a href="/terms">Terms of Service</a>
+        </div>
         <p>&copy; 2024 Foteini Dritseli. All rights reserved.</p>
       </div>
     </footer>

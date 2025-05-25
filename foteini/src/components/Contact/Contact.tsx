@@ -1,11 +1,36 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const Contact: React.FC = () => {
-  const [selectedIssue, setSelectedIssue] = useState("");
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    date: "",
+    time: "",
+    issue: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log(formData);
+  };
 
   const mentalHealthIssues = [
-    { value: "", label: "Select a topic (optional)" },
+    { value: "", label: "Select a topic" },
     { value: "anxiety-stress", label: "Anxiety and Stress" },
     { value: "self-confidence", label: "Insecurity and Self-confidence" },
     { value: "anger", label: "Anger Management" },
@@ -29,30 +54,88 @@ const Contact: React.FC = () => {
     { value: "other", label: "Other (Please specify in message)" },
   ];
 
+  const timeSlots = [
+    "09:00",
+    "09:30",
+    "10:00",
+    "10:30",
+    "11:00",
+    "11:30",
+    "12:00",
+    "12:30",
+    "13:00",
+    "13:30",
+    "14:00",
+    "14:30",
+    "15:00",
+    "15:30",
+    "16:00",
+    "16:30",
+    "17:00",
+    "17:30",
+  ];
+
   return (
-    <section id="contact" className="contact">
+    <section className="contact" id="contact">
       <h2>Contact</h2>
       <div className="contact-container">
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={handleSubmit}>
           <label>
             Name
-            <input type="text" name="name" required />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Email
-            <input type="email" name="email" required />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </label>
+          <div className="appointment-time">
+            <label>
+              Preferred Date
+              <input
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Preferred Time
+              <select
+                name="time"
+                value={formData.time}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select a time</option>
+                {timeSlots.map((time) => (
+                  <option key={time} value={time}>
+                    {time}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
           <label>
-            Appointment Date
-            <input type="date" name="appointment" required />
-          </label>
-          <label>
-            I would like to discuss
+            What would you like to discuss?
             <select
               name="issue"
-              value={selectedIssue}
-              onChange={(e) => setSelectedIssue(e.target.value)}
+              value={formData.issue}
+              onChange={handleChange}
               className="issue-select"
+              required
             >
               {mentalHealthIssues.map((issue) => (
                 <option key={issue.value} value={issue.value}>
@@ -65,11 +148,14 @@ const Contact: React.FC = () => {
             Additional Information
             <textarea
               name="message"
-              rows={3}
-              placeholder="Please provide any additional details you'd like to share (optional)"
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              placeholder="Please provide any additional details you'd like to share"
+              required
             />
           </label>
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
         </form>
       </div>
     </section>
