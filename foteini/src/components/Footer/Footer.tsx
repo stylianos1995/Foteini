@@ -3,8 +3,11 @@ import "./Footer.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -62,11 +65,10 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-bottom">
         <div className="legal-links">
-          <a href="/privacy-policy">Privacy Policy</a>
-          <span className="separator">|</span>
-          <a href="/terms">Terms of Service</a>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/terms-of-service">Terms of Service</Link>
         </div>
-        <p>&copy; 2024 Foteini Dritseli. All rights reserved.</p>
+        <p>&copy; {currentYear} Foteini Dritseli. All rights reserved.</p>
       </div>
     </footer>
   );
