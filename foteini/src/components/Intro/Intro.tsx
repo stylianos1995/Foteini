@@ -18,7 +18,7 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
   };
 
   return (
-    <div className={`intro-screen ${isAnimating ? "fade-out" : ""}`}>
+    <div className={`intro-container ${isAnimating ? "fade-out" : ""}`}>
       <div
         className={`intro-content ${isHovered ? "hover" : ""}`}
         onClick={handleClick}
@@ -30,7 +30,7 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
           <div className="glow-effect"></div>
         </div>
         <h1 className="intro-title">Illuminate</h1>
-        <p className="intro-subtitle">Become the light</p>
+        <p className="intro-subtitle">Guiding Your Path to Mental Wellness</p>
       </div>
     </div>
   );
