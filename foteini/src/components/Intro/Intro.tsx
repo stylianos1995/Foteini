@@ -30,7 +30,7 @@ const Intro: React.FC<IntroProps> = ({ onComplete }) => {
           <div className="glow-effect"></div>
         </div>
         <h1 className="intro-title">Illuminate</h1>
-        <p className="intro-subtitle">Guiding Your Path to Mental Wellness</p>
+        <p className="intro-subtitle">Become the light</p>
       </div>
     </div>
   );

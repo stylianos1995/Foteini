@@ -7,6 +7,18 @@ const Services: React.FC = () => {
   const [isBookOpen, setIsBookOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const services = [
     {
@@ -58,6 +70,14 @@ const Services: React.FC = () => {
     }
   };
 
+  const handlePageClick = (side: "left" | "right") => {
+    if (side === "left") {
+      handlePrevPage();
+    } else {
+      handleNextPage();
+    }
+  };
+
   const totalPages = Math.ceil(services.length / 2);
 
   return (
@@ -85,28 +105,36 @@ const Services: React.FC = () => {
           ) : (
             <div className={`book-open ${!isTransitioning ? "active" : ""}`}>
               <img src={openBook} alt="Open Book" className="book-image" />
-              <div className="book-content">
-                <div className="book-pages">
-                  <div className="page left-page">
-                    <div className="page-content">
-                      <h3>{services[currentPage].title}</h3>
-                      <p>{services[currentPage].description}</p>
-                    </div>
-                  </div>
-                  <div className="page right-page">
-                    <div className="page-content">
-                      {currentPage + 1 < services.length && (
-                        <>
-                          <h3>{services[currentPage + 1].title}</h3>
-                          <p>{services[currentPage + 1].description}</p>
-                        </>
-                      )}
-                    </div>
+              <div className="book-pages">
+                <div
+                  className="page left-page"
+                  onClick={() => isMobile && handlePageClick("left")}
+                  style={{ cursor: isMobile ? "pointer" : "default" }}
+                >
+                  <div className="page-content">
+                    <h3>{services[currentPage].title}</h3>
+                    <p>{services[currentPage].description}</p>
                   </div>
                 </div>
-                <div className="page-number">
-                  {Math.floor(currentPage / 2) + 1} / {totalPages}
+                <div
+                  className="page right-page"
+                  onClick={() => isMobile && handlePageClick("right")}
+                  style={{ cursor: isMobile ? "pointer" : "default" }}
+                >
+                  <div className="page-content">
+                    {currentPage + 1 < services.length && (
+                      <>
+                        <h3>{services[currentPage + 1].title}</h3>
+                        <p>{services[currentPage + 1].description}</p>
+                      </>
+                    )}
+                  </div>
                 </div>
+              </div>
+              <div className="page-number">
+                {Math.floor(currentPage / 2) + 1} / {totalPages}
+              </div>
+              {!isMobile && (
                 <div className="book-controls">
                   <button className="page-button prev" onClick={handlePrevPage}>
                     ←
@@ -119,7 +147,7 @@ const Services: React.FC = () => {
                     →
                   </button>
                 </div>
-              </div>
+              )}
             </div>
           )}
         </div>

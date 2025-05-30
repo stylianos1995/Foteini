@@ -4,7 +4,7 @@ import img1 from "../../assets/brain.png";
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="hero">
+    <section id="home" className="hero">
       <div className="hero-content">
         <h1>Foteini Dritseli</h1>
         <blockquote>

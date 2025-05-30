@@ -30,12 +30,14 @@ const Navbar: React.FC = () => {
       e.preventDefault();
       navigate("/", { state: { scrollTo: targetId } as LocationState });
     }
+    setIsMenuOpen(false);
   };
 
   const handleLogoClick = () => {
     if (location.pathname !== "/") {
       navigate("/");
     }
+    setIsMenuOpen(false);
   };
 
   return (
@@ -45,11 +47,15 @@ const Navbar: React.FC = () => {
           <img src={logo} alt="Logo" className="logo" />
         </div>
 
-        <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <div className={`bar ${isMenuOpen ? "active" : ""}`}></div>
-          <div className={`bar ${isMenuOpen ? "active" : ""}`}></div>
-          <div className={`bar ${isMenuOpen ? "active" : ""}`}></div>
-        </div>
+        <button
+          className={`burger-menu ${isMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+        </button>
 
         <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <a href="#home" onClick={(e) => handleNavClick(e, "home")}>
