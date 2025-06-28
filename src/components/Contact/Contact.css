@@ -1,0 +1,127 @@
+.contact {
+    background-color: #DBD0C5;
+    padding: 80px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact h2 {
+    color: #9A9B87;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #9A9B87;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid rgba(154, 155, 135, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #9A9B87;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #E4C6BD;
+    box-shadow: 0 0 0 2px rgba(228, 198, 189, 0.2);
+}
+
+.appointment-time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.issue-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(154, 155, 135, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #9A9B87;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.issue-select option {
+    padding: 10px;
+    background-color: white;
+}
+
+.contact-form button {
+    background-color: #E4C6BD;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #d4b6ad;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .appointment-time {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
+} 

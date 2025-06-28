@@ -1,0 +1,25 @@
+{
+  "short_name": "Illuminate",
+  "name": "Illuminate - Mental Health and Psychology Services",
+  "icons": [
+    {
+      "src": "logo-fot.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-fot.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo-fot.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#9A9B87",
+  "background_color": "#DBD0C5"
+}
