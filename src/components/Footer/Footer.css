@@ -1,0 +1,246 @@
+.footer {
+    background-color: #9A9B87;
+    color: #DBD0C5;
+    padding: 60px 20px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    color: #DBD0C5;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-details p {
+    margin: 0;
+    color: #DBD0C5;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details a {
+    color: #DBD0C5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #E4C6BD;
+}
+
+.social-links {
+    flex: 0 0 auto;
+}
+
+.social-links h4 {
+    color: #DBD0C5;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #DBD0C5;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(228, 198, 189, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.social-icons a:hover {
+    color: #E4C6BD;
+    transform: translateY(-3px);
+    background: rgba(228, 198, 189, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(219, 208, 197, 0.2);
+    text-align: center;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.legal-links a {
+    color: #DBD0C5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.legal-links a:hover {
+    color: #E4C6BD;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #DBD0C5;
+}
+
+.copyright {
+    color: #DBD0C5;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.privacy-policy,
+.terms-of-service {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 2rem;
+    min-height: calc(100vh - 400px); /* Account for navbar and footer */
+}
+
+.privacy-policy h2,
+.terms-of-service h2 {
+    color: #DBD0C5;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.privacy-policy section,
+.terms-of-service section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(219, 208, 197, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.privacy-policy section:hover,
+.terms-of-service section:hover {
+    transform: translateY(-2px);
+    background: rgba(219, 208, 197, 0.15);
+}
+
+.privacy-policy h3,
+.terms-of-service h3 {
+    color: #DBD0C5;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.privacy-policy p,
+.terms-of-service p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #DBD0C5;
+    font-size: 1.1rem;
+}
+
+.privacy-policy ul,
+.terms-of-service ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-policy li,
+.terms-of-service li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #DBD0C5;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.privacy-policy li:before,
+.terms-of-service li:before {
+    content: "•";
+    color: #E4C6BD;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .privacy-policy,
+    .terms-of-service {
+        margin: 5rem 1rem 2rem;
+        padding: 1rem;
+    }
+
+    .privacy-policy h2,
+    .terms-of-service h2 {
+        font-size: 2rem;
+    }
+
+    .privacy-policy h3,
+    .terms-of-service h3 {
+        font-size: 1.5rem;
+    }
+
+    .privacy-policy p,
+    .terms-of-service p,
+    .privacy-policy li,
+    .terms-of-service li {
+        font-size: 1rem;
+    }
+} 
