@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/foteini/static/css/main.83f66978.css",
-    "main.js": "/foteini/static/js/main.c7eb822a.js",
-    "static/js/453.6028b449.chunk.js": "/foteini/static/js/453.6028b449.chunk.js",
+    "main.js": "/foteini/static/js/main.9e3e7d02.js",
+    "static/js/488.ee224685.chunk.js": "/foteini/static/js/488.ee224685.chunk.js",
     "static/media/brain.png": "/foteini/static/media/brain.c5aef57eb42ebd9491f3.png",
     "static/media/book1.png": "/foteini/static/media/book1.d8f151bef4c5c265d569.png",
     "static/media/book2.png": "/foteini/static/media/book2.6a83552ad975ca2bcef4.png",
@@ -10,11 +10,11 @@
     "static/media/foteini.png": "/foteini/static/media/foteini.9e217c172524287bd0b7.png",
     "index.html": "/foteini/index.html",
     "main.83f66978.css.map": "/foteini/static/css/main.83f66978.css.map",
-    "main.c7eb822a.js.map": "/foteini/static/js/main.c7eb822a.js.map",
-    "453.6028b449.chunk.js.map": "/foteini/static/js/453.6028b449.chunk.js.map"
+    "main.9e3e7d02.js.map": "/foteini/static/js/main.9e3e7d02.js.map",
+    "488.ee224685.chunk.js.map": "/foteini/static/js/488.ee224685.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83f66978.css",
-    "static/js/main.c7eb822a.js"
+    "static/js/main.9e3e7d02.js"
   ]
 }
