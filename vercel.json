@@ -1,0 +1,11 @@
+{
+  "name": "foteini",
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+

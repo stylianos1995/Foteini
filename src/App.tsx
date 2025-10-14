@@ -48,7 +48,7 @@ function App() {
   }
 
   return (
-    <Router basename="/foteini">
+    <Router>
       <div className="App">
         <ScrollToSection />
         <Routes>
