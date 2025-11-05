@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import "./About.css";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
+import { useLanguage } from "../../contexts/LanguageContext";
 import img2 from "../../assets/foteini.png";
 
 const About = () => {
@@ -8,6 +9,43 @@ const About = () => {
     threshold: 0.1,
     rootMargin: "-50px",
   });
+  const { t } = useLanguage();
+  const [openQuestion, setOpenQuestion] = useState<number | null>(null);
+
+  const questions = useMemo(
+    () => [
+      {
+        title: t("about.academic.title"),
+        content: t("about.academic.content"),
+      },
+      {
+        title: t("about.experience.title"),
+        content: t("about.experience.content"),
+      },
+      {
+        title: t("about.training.title"),
+        content: t("about.training.content"),
+      },
+      {
+        title: t("about.work.title"),
+        content: (
+          <>
+            <p>{t("about.work.content")}</p>
+            <ul className="work-approach">
+              <li>{t("about.work.online")}</li>
+              <li>{t("about.work.fees")}</li>
+              <li>{t("about.work.free")}</li>
+            </ul>
+          </>
+        ),
+      },
+    ],
+    [t]
+  );
+
+  const toggleQuestion = (index: number) => {
+    setOpenQuestion(openQuestion === index ? null : index);
+  };
 
   return (
     <section id="about" className="about">
@@ -15,31 +53,47 @@ const About = () => {
         ref={ref}
         className={`about-container ${isIntersecting ? "fade-in" : ""}`}
       >
-        <div className="about-image">
-          <img src={img2} alt="Foteini Dritseli" />
+        {/* About Intro Section - Photo and Text Side by Side */}
+        <div className="about-intro">
+          <div className="about-image">
+            <img src={img2} alt="Foteini Dritseli" />
+          </div>
+          <div className="about-content">
+            <h2>{t("about.title")}</h2>
+            <p>{t("about.intro")}</p>
+          </div>
         </div>
-        <div className="about-content">
-          <h2>About Me</h2>
-          <p>
-            I am a licensed psychologist with a passion for helping individuals
-            navigate their mental health journey. With years of experience in
-            cognitive behavioral therapy and relationship counseling, I provide
-            a safe and supportive environment for my clients to explore their
-            thoughts and emotions.
-          </p>
-          <p>
-            My approach combines evidence-based techniques with a warm,
-            empathetic style, ensuring that each client receives personalized
-            care tailored to their unique needs.
-          </p>
-          <div className="credentials">
-            <h3>Professional Credentials</h3>
-            <ul>
-              <li>Licensed Psychologist</li>
-              <li>Specialized in Cognitive Behavioral Therapy</li>
-              <li>Certified Relationship Counselor</li>
-              <li>Member of the Greek Psychological Association</li>
-            </ul>
+
+        {/* Questions Section */}
+        <div className="questions-section">
+          <h2 className="questions-title">{t("about.questions.title")}</h2>
+          <div className="questions-container">
+            {questions.map((question, index) => (
+              <div
+                key={index}
+                className={`question-item ${
+                  openQuestion === index ? "open" : ""
+                }`}
+              >
+                <button
+                  className="question-header"
+                  onClick={() => toggleQuestion(index)}
+                  aria-expanded={openQuestion === index}
+                >
+                  <h3>{question.title}</h3>
+                  <span className="question-icon">
+                    {openQuestion === index ? "−" : "+"}
+                  </span>
+                </button>
+                <div className="question-content">
+                  {typeof question.content === "string" ? (
+                    <p>{question.content}</p>
+                  ) : (
+                    question.content
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

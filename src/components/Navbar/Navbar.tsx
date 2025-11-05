@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo-fot.png";
+import greekFlag from "../../assets/Flag_of_Greece.svg";
+import britishFlag from "../../assets/Flag_of_the_United_Kingdom.svg";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface LocationState {
   scrollTo?: string;
@@ -12,6 +15,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +44,10 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  const handleLanguageToggle = () => {
+    setLanguage(language === "el" ? "en" : "el");
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
@@ -59,17 +67,32 @@ const Navbar: React.FC = () => {
 
         <div className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
           <a href="#home" onClick={(e) => handleNavClick(e, "home")}>
-            Home
+            {t("nav.home")}
           </a>
           <a href="#about" onClick={(e) => handleNavClick(e, "about")}>
-            About
+            {t("nav.about")}
           </a>
           <a href="#services" onClick={(e) => handleNavClick(e, "services")}>
-            Services
+            {t("nav.services")}
           </a>
           <a href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
-            Contact
+            {t("nav.contact")}
           </a>
+        </div>
+        
+        <div className="language-toggle">
+          <button
+            className="lang-btn"
+            onClick={handleLanguageToggle}
+            aria-label={language === "el" ? "Switch to English" : "Switch to Greek"}
+            title={language === "el" ? "Switch to English" : "Switch to Greek"}
+          >
+            <img 
+              src={language === "el" ? greekFlag : britishFlag} 
+              alt={language === "el" ? "Greek flag" : "British flag"}
+              className="flag-icon"
+            />
+          </button>
         </div>
       </div>
     </nav>

@@ -12,8 +12,8 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 40px;
-    align-items: center;
+    flex-direction: column;
+    gap: 60px;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease;
@@ -22,6 +22,14 @@
 .about-container.fade-in {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* About Intro Section */
+.about-intro {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
 }
 
 .about-image {
@@ -82,41 +90,137 @@
     font-weight: 500;
 }
 
-.credentials {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
+/* Questions Section */
+.questions-section {
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(154, 155, 135, 0.3);
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease 0.6s;
 }
 
-.fade-in .credentials {
+.fade-in .questions-section {
     opacity: 1;
     transform: translateY(0);
 }
 
-.credentials h3 {
+.questions-title {
+    font-size: 2rem;
     color: #9A9B87;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.credentials ul {
-    list-style: none;
-    padding: 0;
-}
-
-.credentials li {
-    color: #9A9B87;
-    margin-bottom: 10px;
-    padding-left: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
     position: relative;
 }
 
-.credentials li::before {
+.questions-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E4C6BD, transparent);
+    border-radius: 2px;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.question-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-header {
+    width: 100%;
+    padding: 20px 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.question-header:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.question-header h3 {
+    color: #9A9B87;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+}
+
+.question-icon {
+    font-size: 1.8rem;
+    color: #E4C6BD;
+    font-weight: 300;
+    line-height: 1;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+}
+
+.question-item.open .question-icon {
+    transform: rotate(180deg);
+}
+
+.question-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 25px;
+}
+
+.question-item.open .question-content {
+    max-height: 1000px;
+    padding: 0 25px 20px 25px;
+}
+
+.question-content p {
+    color: #9A9B87;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.question-content p:last-child {
+    margin-bottom: 0;
+}
+
+.work-approach {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.work-approach li {
+    color: #9A9B87;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.work-approach li::before {
     content: "•";
     color: #E4C6BD;
     font-size: 1.5rem;
@@ -146,6 +250,10 @@
     }
 
     .about-container {
+        gap: 40px;
+    }
+
+    .about-intro {
         flex-direction: column;
         gap: 30px;
     }
@@ -162,5 +270,35 @@
 
     .about-content p {
         font-size: 1rem;
+    }
+
+    .questions-section {
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .questions-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .question-header {
+        padding: 15px 20px;
+    }
+
+    .question-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .question-icon {
+        font-size: 1.5rem;
+    }
+
+    .question-content {
+        padding: 0 20px;
+    }
+
+    .question-item.open .question-content {
+        padding: 0 20px 15px 20px;
     }
 }

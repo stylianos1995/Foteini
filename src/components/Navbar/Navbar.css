@@ -239,4 +239,57 @@
 
 .navbar.dark-mode .burger-line {
     background-color: #DBD0C5;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: 2px solid #DBD0C5;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 48px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.flag-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.lang-btn:hover {
+    background-color: rgba(228, 198, 189, 0.2);
+    border-color: #E4C6BD;
+    transform: scale(1.1);
+}
+
+.lang-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .language-toggle {
+        position: absolute;
+        top: 15px;
+        right: 60px;
+        z-index: 1003;
+    }
+
+    .lang-btn {
+        width: 40px;
+        height: 30px;
+    }
 } 

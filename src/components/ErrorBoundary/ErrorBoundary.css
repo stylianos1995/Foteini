@@ -1,0 +1,121 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #DBD0C5 0%, #E4C6BD 100%);
+  padding: 2rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.error-boundary-content {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.error-boundary-content h1 {
+  font-family: 'Playfair Display', serif;
+  color: #9A9B87;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-boundary-content p {
+  color: #9A9B87;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.error-details {
+  margin: 2rem 0;
+  text-align: left;
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.error-details summary {
+  cursor: pointer;
+  color: #9A9B87;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.error-details summary:hover {
+  color: #E4C6BD;
+}
+
+.error-message {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  color: #d32f2f;
+  margin-top: 0.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.error-button {
+  padding: 12px 24px;
+  background: #E4C6BD;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.error-button:hover {
+  background: #d4b6ab;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.error-button:active {
+  transform: translateY(0);
+}
+
+.error-button.secondary {
+  background: #9A9B87;
+}
+
+.error-button.secondary:hover {
+  background: #7a7b6a;
+}
+
+@media (max-width: 768px) {
+  .error-boundary-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .error-boundary-content h1 {
+    font-size: 2rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-button {
+    width: 100%;
+  }
+}
+

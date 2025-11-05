@@ -50,6 +50,20 @@
     transition: all 0.3s ease;
 }
 
+/* Style for date input to indicate weekdays only */
+.contact-form input[type="date"] {
+    cursor: pointer;
+}
+
+.contact-form input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.contact-form input[type="date"]:invalid {
+    border-color: rgba(244, 67, 54, 0.5);
+}
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -92,9 +106,47 @@
     margin-top: 20px;
 }
 
-.contact-form button:hover {
+.contact-form button:hover:not(:disabled) {
     background-color: #d4b6ad;
     transform: translateY(-2px);
+}
+
+.contact-form button:disabled {
+    background-color: #9A9B87;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.submit-message {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.submit-message.success {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.submit-message.error {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {

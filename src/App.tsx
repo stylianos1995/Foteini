@@ -6,6 +6,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./App.css";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import LanguageAttribute from "./components/LanguageAttribute/LanguageAttribute";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -39,39 +42,56 @@ const ScrollToSection: React.FC = () => {
 function App() {
   const [showIntro, setShowIntro] = useState(true);
 
+  // Initialize lang attribute based on saved preference or default to Greek
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language") || "el";
+    document.documentElement.lang = savedLanguage;
+  }, []);
+
   const handleIntroComplete = () => {
     setShowIntro(false);
   };
 
   if (showIntro) {
-    return <Intro onComplete={handleIntroComplete} />;
+    return (
+      <ErrorBoundary>
+        <Intro onComplete={handleIntroComplete} />
+      </ErrorBoundary>
+    );
   }
 
   return (
-    <Router>
-      <div className="App">
-        <ScrollToSection />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar />
-                <main>
-                  <Hero />
-                  <About />
-                  <Services />
-                  <Contact />
-                </main>
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-        </Routes>
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <LanguageAttribute />
+        <Router>
+          <div className="App">
+            <ScrollToSection />
+            <ErrorBoundary>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Navbar />
+                      <main>
+                        <Hero />
+                        <About />
+                        <Services />
+                        <Contact />
+                      </main>
+                      <Footer />
+                    </>
+                  }
+                />
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+              </Routes>
+            </ErrorBoundary>
+          </div>
+        </Router>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 }
 

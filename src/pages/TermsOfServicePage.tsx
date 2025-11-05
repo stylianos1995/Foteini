@@ -66,7 +66,7 @@ const TermsOfServicePage: React.FC = () => {
             <li>Provide accurate and complete information</li>
             <li>
               Attend scheduled appointments or provide adequate notice for
-              cancellations
+              cancellations (see Cancellation Policy below)
             </li>
             <li>Follow professional recommendations and treatment plans</li>
             <li>Maintain confidentiality of your account information</li>
@@ -75,7 +75,49 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>4. Disclaimer</h2>
+          <h2>4. Cancellation Policy</h2>
+          <p>
+            <strong>Appointment cancellations must be made at least 24 hours in advance.</strong>
+          </p>
+          <p>
+            If you need to cancel or reschedule your appointment, please notify 
+            me at least 24 hours before your scheduled session time. This allows 
+            me to offer the time slot to other clients who may need it.
+          </p>
+          <p>
+            <strong>Late Cancellations and No-Shows:</strong> If you cancel with 
+            less than 24 hours notice or fail to attend your scheduled appointment 
+            without prior notification, the session fee will be charged. This policy 
+            applies to both in-person and online sessions.
+          </p>
+          <p>
+            Exceptions may be made in cases of genuine emergencies or unforeseen 
+            circumstances, which will be evaluated on a case-by-case basis.
+          </p>
+        </section>
+
+        <section>
+          <h2>5. Confidentiality</h2>
+          <p>
+            All sessions and communications are treated with the strictest 
+            confidentiality. Information shared during sessions will not be 
+            disclosed to third parties except in the following circumstances:
+          </p>
+          <ul>
+            <li>When you provide explicit written consent</li>
+            <li>When there is an immediate risk of harm to yourself or others</li>
+            <li>When required by law or court order</li>
+            <li>In cases of suspected child abuse or neglect</li>
+          </ul>
+          <p>
+            Session recordings are never made without your explicit written consent. 
+            Any recordings will be stored securely and deleted according to agreed 
+            retention periods.
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Disclaimer</h2>
           <p>
             The materials on Illuminate's website are provided on an 'as is'
             basis. Illuminate makes no warranties, expressed or implied, and
@@ -91,7 +133,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>5. Limitations</h2>
+          <h2>7. Limitations</h2>
           <p>
             In no event shall Illuminate or its suppliers be liable for any
             damages (including, without limitation, damages for loss of data or
@@ -101,7 +143,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>6. Revisions and Errata</h2>
+          <h2>8. Revisions and Errata</h2>
           <p>
             The materials appearing on Illuminate's website could include
             technical, typographical, or photographic errors. Illuminate does
@@ -111,7 +153,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>7. Links</h2>
+          <h2>9. Links</h2>
           <p>
             Illuminate has not reviewed all of the sites linked to its website
             and is not responsible for the contents of any such linked site. The
@@ -121,7 +163,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>8. Modifications</h2>
+          <h2>10. Modifications</h2>
           <p>
             Illuminate may revise these terms of service at any time without
             notice. By using this website, you agree to be bound by the current
@@ -130,7 +172,7 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>9. Governing Law</h2>
+          <h2>11. Governing Law</h2>
           <p>
             These terms and conditions are governed by and construed in
             accordance with the laws of Greece and you irrevocably submit to the
@@ -139,14 +181,14 @@ const TermsOfServicePage: React.FC = () => {
         </section>
 
         <section>
-          <h2>10. Contact Information</h2>
+          <h2>12. Contact Information</h2>
           <p>
-            If you have any questions about these Terms of Service, please
-            contact us at:
+            If you have any questions about these Terms of Service, the cancellation 
+            policy, or any other aspect of our services, please contact me at:
           </p>
-          <p>Email: info@illuminate.com</p>
-          <p>Phone: +30 690 000 0000</p>
-          <p>Address: Athens, Greece</p>
+          <p><strong>Email:</strong> dritselifoteini@gmail.com</p>
+          <p><strong>Phone:</strong> +31 627904800 (NL)</p>
+          <p><strong>Location:</strong> Maastricht, The Netherlands</p>
         </section>
       </main>
       <Footer />

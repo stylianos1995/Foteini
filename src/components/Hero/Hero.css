@@ -65,12 +65,24 @@
 .hero h1 {
     font-size: 3.5rem;
     color: #9A9B87;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-weight: 700;
     letter-spacing: -0.5px;
     opacity: 0;
     animation: fadeInUp 1s ease forwards 0.3s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateZ(0);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #AD8E85;
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.45s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     transform: translateZ(0);
 }
 
@@ -123,9 +135,8 @@
 
 @media (max-width: 768px) {
     .hero {
+        background-image: none; /* Remove background from hero on mobile */
         background-attachment: scroll;
-        background-position: center center;
-        background-size: cover;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -134,9 +145,35 @@
         padding: 0;
         border: none;
         outline: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Create a fixed background layer for mobile using pseudo-element */
+    .hero::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../../assets/brain.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 0;
+        pointer-events: none;
+        transform: translateZ(0); /* Force GPU acceleration */
+        will-change: transform;
+    }
+
+    /* Ensure gradient overlay is above the background */
+    .hero::before {
+        z-index: 1;
     }
 
     .hero-content {
+        z-index: 2;
         min-height: calc(100vh - 80px);
         padding-top: 80px;
         display: flex;
@@ -149,6 +186,11 @@
 
     .hero h1 {
         font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
         margin-bottom: 20px;
     }
 

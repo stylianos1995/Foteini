@@ -4,40 +4,42 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="contact-info">
-          <h3>Get in Touch</h3>
+          <h3>{t("footer.getInTouch")}</h3>
           <div className="contact-details">
             <p>
               <span>📧</span>
-              <a href="mailto:fotdrt@gmail.com">fotdrt@gmail.com</a>
+              <a href="mailto:dritselifoteini@gmail.com">dritselifoteini@gmail.com</a>
             </p>
             <p>
               <span>📞</span>
-              <a href="tel:+306977628660">(+30) 6977628660</a>
+              <a href="tel:+31627904800">+31 627904800 (NL)</a>
             </p>
             <p>
               <span>📍</span>
-              Thessaloniki, Greece
+              {t("footer.location")}
             </p>
             <p>
               <span>⏰</span>
-              Available for appointments Monday to Friday, 9:00 - 18:00
+              {t("footer.available")}
             </p>
           </div>
         </div>
 
         <div className="social-links">
-          <h4>Connect with Me</h4>
+          <h4>{t("footer.connect")}</h4>
           <div className="social-icons">
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/foteini-dritseli-649858375/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -45,15 +47,7 @@ const Footer: React.FC = () => {
               <LinkedInIcon />
             </a>
             <a
-              href="https://facebook.com/your-profile"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              href="https://instagram.com/your-profile"
+              href="https://www.instagram.com/fcteini"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -65,10 +59,10 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-bottom">
         <div className="legal-links">
-          <Link to="/privacy-policy">Privacy Policy</Link>
-          <Link to="/terms-of-service">Terms of Service</Link>
+          <Link to="/privacy-policy">{t("footer.privacy")}</Link>
+          <Link to="/terms-of-service">{t("footer.terms")}</Link>
         </div>
-        <p>&copy; {currentYear} Foteini Dritseli. All rights reserved.</p>
+        <p>&copy; {currentYear} Foteini Dritseli. {t("footer.rights")}</p>
       </div>
     </footer>
   );
