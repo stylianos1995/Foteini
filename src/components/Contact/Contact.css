@@ -95,7 +95,7 @@
 }
 
 .contact-form button {
-    background-color: #E4C6BD;
+    background-color: #B77F70;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -107,7 +107,7 @@
 }
 
 .contact-form button:hover:not(:disabled) {
-    background-color: #d4b6ad;
+    background-color: #a97162;
     transform: translateY(-2px);
 }
 

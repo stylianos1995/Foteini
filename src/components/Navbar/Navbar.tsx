@@ -40,8 +40,11 @@ const Navbar: React.FC = () => {
   const handleLogoClick = () => {
     if (location.pathname !== "/") {
       navigate("/");
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 0);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    setIsMenuOpen(false);
+  setIsMenuOpen(false);
   };
 
   const handleLanguageToggle = () => {

@@ -77,9 +77,9 @@
 
 .book-overlay {
   position: absolute;
-  top: 55%;
+  top: 52%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -47%);
   text-align: center;
   z-index: 2;
   margin: 0;
@@ -142,7 +142,7 @@
   height: 100%;
   padding: 2rem;
   position: absolute;
-  top: 35%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85%;
@@ -177,13 +177,13 @@
 
 .page-content h3 {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 1px;
   color: #9A9B87;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-weight: 600;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .page-content h3::after {
@@ -271,8 +271,8 @@
 
   .page-content h3 {
     font-size: 16px;
-    margin-bottom: 12px;
-    padding-bottom: 10px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
   }
 
   .page-content h3::after {
@@ -535,7 +535,7 @@
 
   .page-content h3 {
     font-size: 22px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: #8B7355;
     font-weight: 600;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
